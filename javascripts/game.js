@@ -1090,7 +1090,7 @@ function reset(tier,challid=0,gain=1) {
 		//Tier 1 - prestige
 		player.prestiges[0]=(tier==1)?player.prestiges[0]+gain:0
 		player.highestTierPrestiges[0]=0
-		if (tier==1&&getPrestigePower().div(player.prestigePower).lte(1.01)) getBonusAch(6)
+		if (tier==1&&getPrestigePower().div(player.prestigePower).lte(1.09)) getBonusAch(6)
 		if (tier==1&&getPrestigePower().div(player.prestigePower).lt(10005)&&getPrestigePower().div(player.prestigePower).gte(9995)) getBonusAch(7)
 		player.prestigePlaytime=0
 		player.prestigePower=(tier==1)?getPrestigePower():(player.supernovaUpgrades.includes(3)&&player.headstarts&&player.currentChallenge==0)?getPPHeadstart():new Decimal(1)
