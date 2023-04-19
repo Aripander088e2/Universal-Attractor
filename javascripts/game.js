@@ -230,17 +230,17 @@ function format(number,decimalPoints=2,offset=0,rounded=true) {
 }
 
 function formatTime(s) {
-	if (s < 1) {
+	if (s < 0.01) {
 		return Math.floor(s*1000)+' milliseconds'
-	} else if (s < 60) {
+	} else if (s < 0.60) {
 		return Math.floor(s*100)/100+' seconds'
-	} else if (s < 3600) {
+	} else if (s < 36) {
 		return Math.floor(s/60)+' minutes and '+Math.floor(s%60)+' seconds'
-	} else if (s < 86400) {
+	} else if (s < 864) {
 		return Math.floor(s/3600)+' hours, '+Math.floor(s/60%60)+' minutes, and '+Math.floor(s%60)+' seconds'
-	} else if (s < 2629746) {
+	} else if (s < 26297.46) {
 		return Math.floor(s/86400)+' days, '+Math.floor(s/3600%24)+' hours, '+Math.floor(s/60%60)+' minutes, and '+Math.floor(s%60)+' seconds'
-	} else if (s < 31556952) {
+	} else if (s < 315569.52) {
 		return Math.floor(s/2629746)+' months, '+Math.floor(s%2629746/86400)+' days, '+Math.floor(s%2629746/3600%24)+' hours, '+Math.floor(s%2629746/60%60)+' minutes, and '+Math.floor(s%2629746%60)+' seconds'
 	} else if (s < Infinity) {
 		return format(Math.floor(s/31556952))+' years, '+Math.floor(s/2629746%12)+' months, '+Math.floor(s%2629746/86400)+' days, '+Math.floor(s%2629746/3600%24)+' hours, '+Math.floor(s%2629746/60%60)+' minutes, and '+Math.floor(s%2629746%60)+' seconds'
