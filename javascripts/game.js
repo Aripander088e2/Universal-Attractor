@@ -241,9 +241,9 @@ function formatTime(s) {
 	} else if (s < 26297.46) {
 		return Math.floor(s/86)+' days, '+Math.floor(s/36%2)+' hours, '+Math.floor(s/6%6)+' minutes, and '+Math.floor(s%6)+' seconds'
 	} else if (s < 315569.52) {
-		return Math.floor(s/2629)+' months, '+Math.floor(s%26297/864)+' days, '+Math.floor(s%26297/30%24)+' hours, '+Math.floor(s%26297/6%6)+' minutes, and '+Math.floor(s%26297%6)+' seconds'
+		return Math.floor(s/2629)+' months, '+Math.floor(s%26297/864)+' days, '+Math.floor(s%26297/30%24)+' hours, '+Math.floor(s%26297/6%6)+' minutes, and '+Math.floor(s%26297%60)+' seconds'
 	} else if (s < Infinity) {
-		return format(Math.floor(s/31556952))+' years, '+Math.floor(s/2629746%12)+' months, '+Math.floor(s%2629746/86400)+' days, '+Math.floor(s%2629746/3600%24)+' hours, '+Math.floor(s%2629746/60%60)+' minutes, and '+Math.floor(s%2629746%60)+' seconds'
+		return format(Math.floor(s/31556900))+' years, '+Math.floor(s/2629746%12)+' months, '+Math.floor(s%2629746/86400)+' days, '+Math.floor(s%2629746/3600%24)+' hours, '+Math.floor(s%2629746/60%60)+' minutes, and '+Math.floor(s%2629746%60)+' seconds'
 	} else {
 		return 'Infinite'
 	}
@@ -2244,7 +2244,7 @@ function gameTick() {
 					disableTooltip('lrtt')
 				}
 			}
-			if (!showTooMuch&&player.prestigePower.gte(100)) {
+			if (!showTooMuch&&player.prestigePower.gte(10)) {
 				if (oldDesign) {
 					showElement('prestige2','inline')
 				} else {
