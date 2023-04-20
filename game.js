@@ -94,7 +94,7 @@ keysPressed=[]
 notOnFocus=true
 notOnShift=1
 
-costs={tiers:[],tupgs:[1,1,1,1,2,8,20,50,100,250,300,500,750,3000],snupgs:[1,15,300,1,1,1,2,2,3,4,5,6,8,9,10,12],intReduceCost:1,bisfeatures:[3000,5000,7500,10000,1e5,1e6],bbCost:1000,neutronBoosts:[0,0,0,0,0],neutronTiers:[]}
+costs={tiers:[],tupgs:[0,1,1,1,0,0,0,0,100,250,300,500,750,3000],snupgs:[1,15,300,1,1,1,2,2,3,4,5,6,8,9,10,12],intReduceCost:1,bisfeatures:[3000,5000,7500,10000,1e5,1e6],bbCost:1000,neutronBoosts:[0,0,0,0,0],neutronTiers:[]}
 gainRate=[0,0]
 streqs=[200,3000,100000,1e16]
 challreqs=[200,300,500,750,1000,1200,1500,1750,2000,2200,2500,2750]
